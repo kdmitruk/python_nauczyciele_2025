@@ -8,8 +8,7 @@ def szyfruj(napis, klucz):
     wynik = ""
     for znak in napis:
         if znak in alfabet:
-            indeks = alfabet.index(znak)
-            zaszyfrowany_znak = szyfr[indeks]
+            zaszyfrowany_znak = szyfr[alfabet.index(znak)]
             wynik += zaszyfrowany_znak
         else:
             wynik += znak
@@ -20,8 +19,7 @@ def odszyfruj(napis, klucz):
     wynik = ""
     for znak in napis:
         if znak in alfabet:
-            indeks = szyfr.index(znak)
-            zaszyfrowany_znak = alfabet[indeks]
+            zaszyfrowany_znak = alfabet[szyfr.index(znak)]
             wynik += zaszyfrowany_znak
         else:
             wynik += znak
