@@ -8,3 +8,4 @@ print(dane)
 
 # T(n) = n
 # O(n) = n
+
