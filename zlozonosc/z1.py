@@ -5,3 +5,6 @@ def pomnoz_przez_2(dane):
 dane = [3, 7, 9, 12, 19, 30, 41, 56, 71]
 pomnoz_przez_2(dane)
 print(dane)
+
+# T(n) = n
+# O(n) = n
