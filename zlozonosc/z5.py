@@ -33,3 +33,4 @@ if __name__ == '__main__':
     print(dane)
 
 #O(N) = N^2
+#M(N) = 1
