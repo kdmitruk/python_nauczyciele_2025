@@ -1,10 +1,16 @@
+import matplotlib.pyplot
+
 def sortuj_babelkowo(dane):
     n = len(dane)
+
+    matplotlib.pyplot.subplots()
 
     for i in range(n-1):
         for j in range(n-1-i):
             if dane[j] > dane[j+1]:
                 dane[j], dane[j+1] = dane[j+1], dane[j]
+
+    matplotlib.pyplot.show()
 
 if __name__ == '__main__':
     dane = [5,78,2,56,5,26]
