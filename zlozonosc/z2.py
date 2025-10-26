@@ -17,8 +17,6 @@ def przeksztalc_v2(dane):
 # T(N) = N
 # O(N) = N
 
-
-
 dane = [3, 7, 9, 12, 19, 30, 41, 56, 71]
 przeksztalc(dane)
 print(dane)
