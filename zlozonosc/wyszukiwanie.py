@@ -10,12 +10,12 @@ def brute_force(dane, szukana):
 def binary_search(dane, szukana):
     pozycja_min = 0
     pozycja_max = len(dane) - 1
-    while True:
+    while pozycja_max - pozycja_min > 1:
         pozycja_srodkowa = pozycja_min + (pozycja_max - pozycja_min) // 2
         wartosc_srodkowa = dane[pozycja_srodkowa]
         if wartosc_srodkowa == szukana:
             return pozycja_srodkowa
-        elif wartosc_srodkowa < szukana:
+        elif wartosc_srodkowa > szukana:
             pozycja_max = pozycja_srodkowa
         else: # wartosc_srodkowa > szukana
             pozycja_min = pozycja_srodkowa
