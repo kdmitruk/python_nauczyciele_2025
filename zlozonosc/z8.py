@@ -43,7 +43,6 @@ def f_rekurencja_ogonowa(n, fn_2 = 0 , fn_1 = 1):
 # O(N) = N
 # M(N) = N
 
-
 if __name__ == '__main__':
     print(f_rekurencja_ogonowa(50))
 
