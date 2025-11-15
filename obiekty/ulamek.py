@@ -38,11 +38,23 @@ class Ulamek:
         return self.__mul__(other)
 
     #def __idiv__(self, other): # // dzielenie calkowite
-    def __truediv__(self, other): # / dzielenie zmiennoprzecinkowe
+    def __truediv__(self, inny): # / dzielenie zmiennoprzecinkowe
         return self.__mul__(Ulamek(
-            other.mianownik,
-            other.licznik
+            inny.mianownik,
+            inny.licznik
         ))
+
+    def __add__(self, inny):
+        return Ulamek(
+            self.licznik * inny.mianownik + inny.licznik * self.mianownik,
+            self.mianownik * inny.mianownik
+        )
+
+    def __sub__(self, inny):
+        return Ulamek(
+            self.licznik * inny.mianownik - inny.licznik * self.mianownik,
+            self.mianownik * inny.mianownik
+        )
 
 def porownaj(a: Ulamek, b: Ulamek):
     wartosc_a = float(a)
@@ -54,7 +66,7 @@ def porownaj(a: Ulamek, b: Ulamek):
 if __name__ == '__main__':
     u1 = Ulamek(2, 3)
     u2 = Ulamek(3, 4)
-    print(u1 / u2)
+    print(u1 - u2)
 
     #print(float(u))
     #print(porownaj(Ulamek(2, 3), Ulamek(3,  4)))
