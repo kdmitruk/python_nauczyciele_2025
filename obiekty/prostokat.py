@@ -1,4 +1,4 @@
-from obiekty.punkt import Punkt
+from punkt import Punkt
 
 class Prostokat:
     def __init__(self, lewy_gorny_punkt, szerokosc, wysokosc):
