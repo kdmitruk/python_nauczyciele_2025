@@ -6,6 +6,9 @@ class Ulamek:
     def czy_calkowita(self):
         return self.licznik % self.mianownik == 0
 
+    def __str__(self):
+        return f"{self.licznik}/{self.mianownik}"
+
 def porownaj(a: Ulamek, b: Ulamek):
     wartosc_a = a.licznik / a.mianownik
     wartosc_b = b.licznik / b.mianownik
@@ -15,4 +18,4 @@ def porownaj(a: Ulamek, b: Ulamek):
 
 if __name__ == '__main__':
     u = Ulamek(8, 4)
-    print(porownaj(Ulamek(3,  4), Ulamek(2, 3)))
+    print(u.__str__())
