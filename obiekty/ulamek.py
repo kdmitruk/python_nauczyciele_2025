@@ -4,6 +4,7 @@ class Ulamek:
     def __init__(self, licznik, mianownik):
         self.licznik = licznik
         self.mianownik = mianownik
+        self.__zredukuj()
 
     def czy_calkowita(self):
         return self.licznik % self.mianownik == 0
@@ -14,7 +15,7 @@ class Ulamek:
     def __float__(self):
         return self.licznik / self.mianownik
 
-    def zredukuj(self):
+    def __zredukuj(self):
         nwd = gcd(self.licznik, self.mianownik)
         self.licznik //= nwd
         self.mianownik //= nwd
@@ -27,8 +28,7 @@ def porownaj(a: Ulamek, b: Ulamek):
     else: return 1
 
 if __name__ == '__main__':
-    u = Ulamek(12, 36)
-    u.zredukuj()
+    u = Ulamek(12, 100)
     print(u)
 
     #print(float(u))
