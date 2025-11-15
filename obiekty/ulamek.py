@@ -20,6 +20,12 @@ class Ulamek:
         self.licznik //= nwd
         self.mianownik //= nwd
 
+    def pomnoz(self, inny):
+        return Ulamek(
+            self.licznik * inny.licznik,
+            self.mianownik * inny.mianownik
+        )
+
 def porownaj(a: Ulamek, b: Ulamek):
     wartosc_a = float(a)
     wartosc_b = float(b)
@@ -28,8 +34,9 @@ def porownaj(a: Ulamek, b: Ulamek):
     else: return 1
 
 if __name__ == '__main__':
-    u = Ulamek(12, 100)
-    print(u)
+    u1 = Ulamek(2, 3)
+    u2 = Ulamek(3, 4)
+    print(u1.pomnoz(u2))
 
     #print(float(u))
     #print(porownaj(Ulamek(2, 3), Ulamek(3,  4)))
