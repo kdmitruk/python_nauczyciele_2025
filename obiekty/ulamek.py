@@ -3,6 +3,9 @@ class Ulamek:
         self.licznik = licznik
         self.mianownik = mianownik
 
+    def czy_calkowita(self):
+        return self.licznik % self.mianownik == 0
+
 if __name__ == '__main__':
-    u = Ulamek(3, 4)
-    print(u.licznik, u.mianownik)
+    u = Ulamek(8, 4)
+    print(u.czy_calkowita())
