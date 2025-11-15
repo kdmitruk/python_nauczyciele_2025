@@ -45,7 +45,7 @@ class Ulamek:
         ))
 
     def __add__(self, inny):
-        return Ulamek(
+        return self.__class__(
             self.licznik * inny.mianownik + inny.licznik * self.mianownik,
             self.mianownik * inny.mianownik
         )
@@ -66,7 +66,7 @@ def porownaj(a: Ulamek, b: Ulamek):
 if __name__ == '__main__':
     u1 = Ulamek(2, 3)
     u2 = Ulamek(3, 4)
-    print(u1 - u2)
+    print(u1 + u2)
 
     #print(float(u))
     #print(porownaj(Ulamek(2, 3), Ulamek(3,  4)))
