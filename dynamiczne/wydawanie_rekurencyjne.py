@@ -2,7 +2,7 @@ def wydaj(wartosc, nominaly):
     if wartosc == 0:
         return 0
 
-    min_liczba_monet = wartosc+1
+    min_liczba_monet = wartosc
     for nominal in nominaly:
         if wartosc - nominal >= 0:
             liczba_monet = wydaj(wartosc - nominal, nominaly) + 1
