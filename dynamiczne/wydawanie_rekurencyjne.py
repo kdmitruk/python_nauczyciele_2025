@@ -9,4 +9,4 @@ def wydaj(wartosc, nominaly):
             min_liczba_monet = min(min_liczba_monet, liczba_monet)
     return min_liczba_monet
 
-print(wydaj(80, [25, 20, 1]))
+print(wydaj(123, [25, 20, 1]))
