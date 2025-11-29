@@ -19,4 +19,4 @@ values = [20, 30, 15, 25, 10]
 weights = [6, 13, 5, 10, 3]
 k = 20
 
-knapsack(k, 0, values, weights)
+print(knapsack(k, 0, values, weights))
