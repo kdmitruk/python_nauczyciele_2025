@@ -9,7 +9,6 @@ def oblicz(n, k):
     pierwszy = Osoba(0)
     poprzedni = pierwszy
 
-
     for i in range(1, n):
         aktualny = Osoba(i)
         poprzedni.nastepny = aktualny
