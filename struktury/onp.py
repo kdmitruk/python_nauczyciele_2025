@@ -28,11 +28,35 @@ def infiksowa_do_postfiksowej(wejscie):
     while stos:
         wyjscie.append(stos.pop())
 
-
     return wyjscie
 
+def oblicz(wejscie):
+    stos = []
+    for token in wejscie:
+        if token in ['+', '-', '*', '/']:
+            operand_prawy = stos.pop()
+            operand_lewy = stos.pop()
+
+            wynik = None
+            match(token):
+                case '+':
+                    wynik = operand_lewy + operand_prawy
+                case '-':
+                    wynik = operand_lewy - operand_prawy
+                case '*':
+                    wynik = operand_lewy * operand_prawy
+                case '/':
+                    wynik = operand_lewy / operand_prawy
+
+            stos.append(wynik)
+        else:
+            stos.append(float(token))
+    return stos.pop()
 
 if __name__ == '__main__':
     wyrazenie = "12 + 2 * ( 3 * 4 + 10 / 5 )"
     wyrazenie = wyrazenie.split(" ")
-    print(" ".join(infiksowa_do_postfiksowej(wyrazenie)))
+    wyrazenie_postfiksowe = infiksowa_do_postfiksowej(wyrazenie)
+    print(" ".join(wyrazenie_postfiksowe))
+    wynik = oblicz(wyrazenie_postfiksowe)
+    print(wynik)
